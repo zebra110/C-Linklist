@@ -1,0 +1,49 @@
+#include"head.h"
+extern struct person *head;
+void addzc()
+{
+	int i=0,a;
+	char b[20],ag[2];
+	system("cls");//qingping
+    struct person *p;
+   	printf("    |||||||||||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>|||||||||\n");
+	printf("    |||||||||||                   添加支出                 |||||||||\n");
+	printf("    |||||||||||>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>|||||||||\n");	
+/*	p=(struct person *)malloc(sizeof(struct person));
+	printf("添加的次数：\t");
+	fflush(stdin);//清除缓存 
+	scanf("%d",&a);
+	for(i=0;i<a;i++)*/
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	while(p=(struct person *)malloc(sizeof(struct person)),printf("           |  date(年/月/日）(获取当时日期输入1||结束输入0)：    \t"), 
+    scanf("%s",p->date),strcmp(p->date,"0")!=0)
+    
+	/*printf("          date(年/月/日）：\t");	
+	scanf("%s",p->date);*/ 
+	//scanf("%s",b);
+{   if(strcmp(p->date,"1")==0)
+	hour();
+	/*else
+	{
+		printf("请输入日期：(年/月/日）"); 
+	scanf("%s",p->date);
+	}
+	*/
+	printf("           |  姓名           ：\t");
+	scanf("%s",p->name);	
+	printf("           |  数目           ：\t");
+	scanf("%f",&p->money);
+	printf("           |  类型           ：\t");
+	scanf("%s",p->type); 
+	printf("           |  细节           ：\t");
+	scanf("%s",p->detail); 	
+	   p->next=head;
+       head=p;
+	}
+	_sleep(2000);
+	//system("pause");按任意键继续 
+	getchar();  //按任意键继续 
+    //cover();
+} 

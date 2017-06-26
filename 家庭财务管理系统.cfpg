@@ -1,0 +1,15 @@
+<Projects version="2.0">
+	<Project active="1">ty.cfp</Project>
+	<File active="1">main.c</File>
+	<File active="0">recycle.c</File>
+	<File active="0">all.c</File>
+	<File active="0">sort.c</File>
+	<File active="0">export.c</File>
+	<File active="0">update.c</File>
+	<File active="0">search.c</File>
+	<File active="0">save.c</File>
+	<File active="0">read.c</File>
+	<File active="0">show.c</File>
+	<File active="0">add.c</File>
+	<File active="0">head.h</File>
+</Projects>

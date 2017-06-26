@@ -1,0 +1,92 @@
+#include"head.h"
+void cover()
+{
+	system("cls"); 
+    int choice;
+	char ag;
+	printf("\t ==========************************=========\n");
+	printf("                \t家庭财务管理系统\n");
+	printf("\t ==========************************=========\n");
+	printf("\t…………………………………………………………\n");
+	printf("\t       收入管理\n");
+	printf("\t              1.添加收入\n");
+	printf("\t              2.查询收入明细\n");
+	printf("\t              3.删除收入\n"); 
+	printf("\t              4.修改收入\n");
+	printf("\t…………………………………………………………\n");
+    printf("\t       支出管理\n");
+	printf("\t              5.添加支出\n");
+	printf("\t              6.查询支出明细\n");
+	printf("\t              7.删除支出\n"); 
+	printf("\t              8.修改支出\n");
+	printf("\t…………………………………………………………\n");
+    printf("\t            显示\n");
+    printf("\t              9.收入信息\n");
+	printf("\t             10.支出信息\n"); 
+    printf("\t…………………………………………………………\n");
+    printf("\t            统计\n");
+	printf("\t              11.统计总收入\n");
+	printf("\t              12.统计总支出\n");
+	printf("\t…………………………………………………………\n");
+    printf("\t              0.退出系统\n ");
+	printf("\n");
+	printf("            请选择要进行的程序（0-12）\n");
+//do{
+    printf("输入对应菜单");
+	scanf("%d",&choice);
+	switch(choice)
+	{
+		case 1: addsr();
+		         save1();
+			break;
+		case 2: read1(); 
+		        searchsr();//查询收入 
+			break;
+		case 3: read1();
+		        deletesr();//删除收入
+		        //save1(); 
+			break;
+		case 4: read1();
+                updatesr();//修改收入
+                save1();
+			break;
+		case 5:addzc();//添加支出
+		       save2();
+		    break;
+        case 6:read2();
+		      searchzc();//查询支出
+            break;
+        case 7:read2();
+		      deletezc();//删除支出
+		     // save2(); 
+            break;
+        case 8:read2();
+		     updatezc();//修改支出
+		      save2();
+            break;
+		case 9:read1();
+		      showincome(); //收入显示 
+            break;
+	    case 10:read2();
+		     showpay(); //支出显示 
+             break;
+		case 11:read1(); 
+		      allincome(); //统计总收入
+            break;
+	    case 12:read2();
+		      allpay();//统计总支出 
+            break;
+	    case 0:exit(0);//退出系统 
+		default: 
+			break;
+	}
+/*	if(choice>=0&&choice<13)
+	{
+	printf("是否继续'y'||'Y'");
+	fflush(stdin);
+	scanf("%c",&ag); 		
+	}
+	
+}while(ag=='y'||ag=='Y');	*/
+}
+

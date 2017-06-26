@@ -1,0 +1,52 @@
+#include"head.h"
+extern struct person *head;
+void deletesr()
+{
+	char names[20],ch[2];
+	struct person *q,*pp;
+   	printf("请输入要删除的姓名：\t");
+	scanf("%s",names);
+	fflush(stdin);
+    q=head;
+/*	while(q!=NULL)
+ {
+	if(strcmp(q->name,names)==0)
+	{
+		printf("|    ----   日期   ----   姓名   ----   数目  ----  类型  ---- 细节  ------   |\n"); 
+        printf("\t%s",q->date);
+        printf("\t%s\t",q->name);
+        printf("\t%.2f",q->money);
+        printf("      %s\t",q->type);
+        printf("  %s\n",q->detail);
+	} 
+	qq=q;
+	q=q->next;
+ }
+ printf("是否删除信息？（y||n）");
+ scanf("%s",ch);
+if(strcmp(ch,y)==0)*/
+	while(strcmp(q->name,names)!=0&&q!=NULL)
+	{
+		pp=q;
+		q=q->next;
+	}
+	if(q==NULL)printf("没找到.\n");
+	else
+	{
+	    printf("|    ----   日期   ----   姓名   ----   数目  ----  类型  ---- 细节  ------   |\n"); 
+        printf("\t%s",q->date);
+        printf("\t%s\t",q->name);
+        printf("\t%.2f",q->money);
+        printf("      %s\t",q->type);
+        printf("  %s\n",q->detail);
+		pp->next=q->next;
+		free(q);	
+		printf("删除成功.\n");
+	}	
+			_sleep(2000);
+	//system("pause");
+	getchar();  
+	save1();
+   // cover();
+	} 
+
